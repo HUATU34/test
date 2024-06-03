@@ -1,0 +1,22 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: root
+        url: jdbc:mysql://localhost:3306/bankcounter?allowPublicKeyRetrieval=true&useSSL=false
+        password: "mysqlwjy20030728!"
+    sql:
+        init:
+            schema-locations: classpath:db/init.sql
+            data-locations: classpath:db/data-init.sql
+            mode: always
+    data:
+        redis:
+            host: localhost
+            port: 6379
+            database: 0
+
+
+server:
+    address: 127.0.0.1
+    port: 8082
+
